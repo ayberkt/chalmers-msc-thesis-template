@@ -1,0 +1,125 @@
+% CREATED BY DAVID FRISK, 2016
+% MODIFIED BY JAKOB JARMAR, 2016
+% A few changes by Birgit Grohe, 2017 and \the\year
+% Adjustments with the help of Gustav Örtenberg 2019
+
+\newcommand{\oneLineTitle}{\thetitle}
+\newcommand{\multiLineTitle}[1]{\thetitle}
+
+% COVER PAGE
+\begin{titlepage}
+\newgeometry{top=3cm, bottom=3cm,
+			left=2.25 cm, right=2.25cm}	% Temporarily change margins		
+			
+% Cover page background 
+\AddToShipoutPicture*{\backgroundpic{-4}{56.7}{figure/auxiliary/frontpage_gu_eng_vec_m2.pdf}}
+\addtolength{\voffset}{2cm}
+
+% Cover picture (replace with your own or delete)		
+\begin{figure}[H]
+\centering
+\vspace{1cm}	% Adjust vertical spacing here
+%\includegraphics[width=0.9\linewidth]{figure/somepicture}
+\end{figure}
+
+%% The title page has no indentation.
+\setlength{\parindent}{0cm}
+
+% Cover text
+\mbox{}
+\vfill
+\renewcommand{\familydefault}{\sfdefault} \normalfont % Set cover page font
+
+\textbf{\Huge \multiLineTitle{0.2cm}} \\[0.5cm]
+
+{\Large \oneLineSubtitle}\\[0.5cm]
+
+%{\Large A Subtitle that can be Very Much Longer if Necessary}\\[0.5cm]
+
+Master's Thesis in Computer Science and Engineering
+
+\vspace{1em}
+
+{\Large \authorfirstname{} \authorlastname{}}
+
+\vspace{2.9cm}
+
+Department of Computer Science and Engineering \\
+\textsc{Chalmers University of Technology} \\
+\textsc{University of Gothenburg} \\
+Gothenburg, Sweden \the\year
+
+\renewcommand{\familydefault}{\rmdefault} \normalfont % Reset standard font
+\end{titlepage}
+
+
+% BACK OF COVER PAGE (BLANK PAGE)
+\newpage
+\restoregeometry
+\thispagestyle{empty}
+\mbox{}
+
+
+% TITLE PAGE
+\newpage
+\thispagestyle{empty}
+\begin{center}
+	\textsc{\large Master's thesis \the\year}\\[4cm]		% Report number is currently not in use
+	\textbf{\Large \multiLineTitle{0.2cm}} \\[1cm]
+	{\large \oneLineSubtitle}\\[1cm]
+	{\large \authorfirstname{} \authorlastname{}}
+	
+	\vfill	
+	% Logotype on titlepage	
+	\begin{figure}[H]
+	\centering
+	% Remove the following line to remove the titlepage logotype
+	\includegraphics[width=0.25\pdfpagewidth]{figure/auxiliary/ChGULogoHog.pdf}
+	\end{figure}	\vspace{5mm}	
+	
+	Department of Computer Science and Engineering\\
+	\emph{Division of \division{}}\\
+	%Name of research group (if applicable)\\
+	\textsc{Chalmers University of Technology} \\
+	\textsc{University of Gothenburg} \\
+	Gothenburg, Sweden \the\year \\
+\end{center}
+
+
+% IMPRINT PAGE (BACK OF TITLE PAGE)
+\newpage
+\thispagestyle{plain}
+\vspace*{4.5cm}
+\noindent \oneLineTitle\\
+\oneLineSubtitle\\
+\authorfirstname{} \authorlastname{}
+
+\vspace{1cm}
+
+\copyright ~ \authorfirstname{} \authorlastname{}, \the\year
+
+\vspace{1em}
+
+Supervisor: \supervisorfirstname{} \supervisorlastname{}, \supervisordepartment{}\\
+Examiner: \examinerfirstname{} \examinerlastname{}, \examinerdepartment{}
+
+\vspace{1em}
+
+Master's Thesis \the\year\\
+Department of Computer Science and Engineering\\
+Division of \division{}\\
+Chalmers University of Technology and University of Gothenburg\\
+SE-412 96 Gothenburg\\
+Telephone +46 31 772 1000
+\vspace{0.5cm}
+\vfill
+% Caption for cover page figure if used, possibly with reference to further information
+% in the report
+Cover: Description of the picture on the cover page (if applicable)
+
+Typeset in \LaTeX \\
+% Printed by [Name of printing company]\\
+Gothenburg, Sweden \the\year
+
+%% Restore the indentation once done with the title page.
+\setlength{\parindent}{1.5em}

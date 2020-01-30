@@ -1,0 +1,67 @@
+% CREATED BY DAVID FRISK, 2016
+% MODIFIED BY JAKOB JARMAR, 2016
+% A few changes by Birgit Grohe, 2017 and 2018
+% Adjustments with the help of Gustav Örtenberg 2019
+
+% IMPORT SETTINGS
+\input{settings}
+
+% The term [#1] indicates that there will be 1 rowbreak to split the title into two pieces, first part before \\[#1] and second part after. If you have a very long title and need to split it up into 3 rows, just use \\[#1] multiple times.
+
+\newcommand{\oneLineSubtitle}{Subtitle}
+
+\begin{document} 
+
+% COVER PAGE, TITLE PAGE AND IMPRINT PAGE
+\pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
+\input{frontmatter/titlepage}
+
+% ABSTRACT
+\newpage
+\input{frontmatter/abstract}
+
+% ACKNOWLEDGEMENTS
+\newpage
+\input{frontmatter/acknowledgements}
+
+% TABLE OF CONTENTS
+\newpage
+\tableofcontents
+
+% OTHER FRONTMATTER
+% List of figures (add to table of contents)
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename} 
+\listoffigures
+% List of tables (add to table of contents)
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}  
+\listoftables
+
+
+% START OF MAIN DOCUMENT
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}			% Arabic numbering starting from 1 (one)
+\setlength{\parindent}{1.5em}
+
+Lorem ipsum dolor sit amet.
+
+\input{content/introduction}
+
+\input{content/conclusion}
+
+% REFERENCES / BIBLIOGRAPHY
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\input{backmatter/references}
+
+% APPENDICES
+\cleardoublepage
+\appendix
+\setcounter{page}{1}
+\pagenumbering{Roman}	% Capitalized roman numbering starting from I (one)
+
+\input{backmatter/appendix_1}
+
+\end{document}

@@ -1,0 +1,78 @@
+% CREATED BY DAVID FRIsK, 2016
+\documentclass[12pt, a4paper, twoside, openright]{report}
+
+% BASIC SETTINGS
+\usepackage{moreverb}								% List settings
+\usepackage{amsmath}								% Mathematical expressions (American mathematical society)
+\usepackage{amssymb}								% Mathematical symbols (American mathematical society)
+\usepackage{graphicx}								% Figures
+\usepackage{titling}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\numberwithin{equation}{chapter}		% Numbering order for equations
+\numberwithin{figure}{chapter}			% Numbering order for figures
+\numberwithin{table}{chapter}				% Numbering order for tables
+
+\usepackage[top=3cm, bottom=3cm, inner=3cm, outer=3cm]{geometry}
+
+\usepackage{eso-pic}								% Create cover page background
+\newcommand{\backgroundpic}[3]{
+	\put(#1,#2){
+	\parbox[b][\paperheight]{\paperwidth}{
+	\centering
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#3}}}}
+\usepackage{float} 		% Enables object position enforcement using [H]
+\usepackage{parskip}	% Enables vertical spaces correctly 
+\usepackage{lipsum}
+\usepackage{datetime} %date formatting tools
+
+\title{The Thesis Title}
+
+\newcommand{\authorfirstname}{John}
+\newcommand{\authorlastname}{Doe}
+\newcommand{\supervisorfirstname}{John}
+\newcommand{\supervisorlastname}{Doe}
+\newcommand{\supervisordepartment}{Department of Computer Science and Engineering}
+\newcommand{\examinerdepartment}{\supervisordepartment{}}
+\newcommand{\examinerfirstname}{John}
+\newcommand{\examinerlastname}{Doe}
+\newcommand{\division}{Logic and Types}
+
+\setmainfont{XITS}
+\setmathfont{XITS Math}
+
+\setlength{\parskip}{0pt plus 1pt}
+
+% OPTIONAL SETTINGS (DELETE OR COMMENT TO SUPRESS)
+
+% Caption settings (aligned left with bold name)
+\usepackage[
+    labelfont=bf
+  , textfont=normal
+  , justification=justified
+  , singlelinecheck=false
+]{caption}
+
+		  	
+% Activate clickable links in table of contents  	
+\usepackage{hyperref}								
+\hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
+
+
+% Define the number of section levels to be included in the t.o.c. and numbered	(3 is default)	
+\setcounter{tocdepth}{5}							
+\setcounter{secnumdepth}{5}	
+
+
+% Chapter title settings
+\usepackage{titlesec}		
+\titleformat{\chapter}[display]
+  {\Huge\bfseries\filcenter}
+  {{\fontsize{50pt}{1em}\vspace{-4.2ex}\selectfont \textnormal{\thechapter}}}{1ex}{}[]
+
+
+% Header and footer settings (Select TWOSIDE or ONESIDE layout below)
+\usepackage{fancyhdr}								
+\pagestyle{fancy}  
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
