@@ -1,0 +1,52 @@
+\input{settings}
+
+\newcommand{\oneLineSubtitle}{Subtitle}
+
+\newcommand{\makefrontmatter}{
+  \pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
+  \input{frontmatter/titlepage}
+
+  % ABSTRACT
+  \newpage
+  \input{frontmatter/abstract}
+
+  % ACKNOWLEDGEMENTS
+  \newpage
+  \input{frontmatter/acknowledgements}
+
+  % TABLE OF CONTENTS
+  \newpage
+  \tableofcontents
+
+  % OTHER FRONTMATTER
+  % List of figures (add to table of contents)
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listfigurename} 
+  \listoffigures
+  % List of tables (add to table of contents)
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listtablename}  
+  \listoftables
+
+  % COVER PAGE, TITLE PAGE AND IMPRINT PAGE
+  % START OF MAIN DOCUMENT
+  \cleardoublepage
+  \setcounter{page}{1}
+  \pagenumbering{arabic}			% Arabic numbering starting from 1 (one)
+  \setlength{\parindent}{1.5em}
+}
+
+\newcommand{\makebackmatter}{
+  % REFERENCES / BIBLIOGRAPHY
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{Bibliography}
+  \input{backmatter/references}
+
+  % APPENDICES
+  \cleardoublepage
+  \appendix
+  \setcounter{page}{1}
+  \pagenumbering{Roman}	% Capitalized roman numbering starting from I (one)
+
+  \input{backmatter/appendix_1}
+}

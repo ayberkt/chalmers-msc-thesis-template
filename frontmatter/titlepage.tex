@@ -5,6 +5,7 @@
 
 \newcommand{\oneLineTitle}{\thetitle}
 \newcommand{\multiLineTitle}[1]{\thetitle}
+\makeatletter
 
 % COVER PAGE
 \begin{titlepage}
@@ -40,7 +41,7 @@ Master's Thesis in Computer Science and Engineering
 
 \vspace{1em}
 
-{\Large \authorfirstname{} \authorlastname{}}
+{\Large \theauthor}
 
 \vspace{2.9cm}
 
@@ -67,7 +68,7 @@ Gothenburg, Sweden \the\year
 	\textsc{\large Master's thesis \the\year}\\[4cm]		% Report number is currently not in use
 	\textbf{\Large \multiLineTitle{0.2cm}} \\[1cm]
 	{\large \oneLineSubtitle}\\[1cm]
-	{\large \authorfirstname{} \authorlastname{}}
+	{\large \@author}
 	
 	\vfill	
 	% Logotype on titlepage	
@@ -78,7 +79,7 @@ Gothenburg, Sweden \the\year
 	\end{figure}	\vspace{5mm}	
 	
 	Department of Computer Science and Engineering\\
-	\emph{Division of \division{}}\\
+	\emph{Division of \@division}\\
 	%Name of research group (if applicable)\\
 	\textsc{Chalmers University of Technology} \\
 	\textsc{University of Gothenburg} \\
@@ -92,22 +93,22 @@ Gothenburg, Sweden \the\year
 \vspace*{4.5cm}
 \noindent \oneLineTitle\\
 \oneLineSubtitle\\
-\authorfirstname{} \authorlastname{}
+\@author
 
 \vspace{1cm}
 
-\copyright ~ \authorfirstname{} \authorlastname{}, \the\year
+\copyright ~ \@author, \the\year
 
 \vspace{1em}
 
-Supervisor: \supervisorfirstname{} \supervisorlastname{}, \supervisordepartment{}\\
-Examiner: \examinerfirstname{} \examinerlastname{}, \examinerdepartment{}
+Supervisor: \@supervisor, Department of \@departmentofsupervisor\\
+Examiner: \@examiner, Department of \@departmentofexaminer
 
 \vspace{1em}
 
 Master's Thesis \the\year\\
 Department of Computer Science and Engineering\\
-Division of \division{}\\
+Division of \@division\\
 Chalmers University of Technology and University of Gothenburg\\
 SE-412 96 Gothenburg\\
 Telephone +46 31 772 1000
@@ -123,3 +124,4 @@ Gothenburg, Sweden \the\year
 
 %% Restore the indentation once done with the title page.
 \setlength{\parindent}{1.5em}
+\makeatother
