@@ -1,18 +1,18 @@
-\input{settings}
+\input{template/settings}
 
 \newcommand{\oneLineSubtitle}{Subtitle}
 
 \newcommand{\makefrontmatter}{
   \pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
-  \input{frontmatter/titlepage}
+  \input{template/frontmatter/titlepage}
 
   % ABSTRACT
   \newpage
-  \input{frontmatter/abstract}
+  \input{template/frontmatter/abstract}
 
   % ACKNOWLEDGEMENTS
   \newpage
-  \input{frontmatter/acknowledgements}
+  \input{template/frontmatter/acknowledgements}
 
   % TABLE OF CONTENTS
   \newpage
