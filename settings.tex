@@ -46,8 +46,27 @@
 \def\keywords#1{\gdef\@keywords{#1}}
 \def\@keywords{\@latex@warning@no@line{No \noexpand\keywords given}}
 
-\def\abstract#1{\gdef\@abstract{#1}}
-\def\@abstract{\@latex@warning@no@line{No \noexpand\abstract given}}
+\renewenvironment{abstract}
+  {\newpage
+   \makeatletter
+   \noindent\oneLineTitle\\
+   \@author\\
+   Department of Computer Science and Engineering\\
+   Chalmers University of Technology and University of Gothenburg
+
+   \thispagestyle{plain} % Supress header
+   \setlength{\parindent}{1.5em}
+   \section*{Abstract}
+  }
+  {% KEYWORDS (MAXIMUM 10 WORDS)
+   \vfill
+   Keywords: foo, bar
+
+   \newpage	% Create empty back of side
+   \thispagestyle{empty}
+   \mbox{}
+   \makeatother
+   }
 
 \makeatother
 
