@@ -44,7 +44,7 @@ Then create your, say `file.tex`, which should look like this:
 ```
 
 This template assumes that you will be using `xelatex/lualatex` (which you
-probably should) with the `fontspace` package. It is assumed that you have
+probably should) with the `fontspec` package. It is assumed that you have
 system-wide installation of certain fonts: [XITS][1] and XITS Math. You can
 override the fonts with `\setmainfont{font-name}` and
 `\setmathfont{math-font-name}` although [the official guidelines][2] state that
