@@ -28,31 +28,28 @@
 \usepackage{datetime} %date formatting tools
 
 \makeatletter
-\def\supervisor#1{\gdef\@supervisor{#1}}
-\def\@supervisor{\@latex@warning@no@line{No \noexpand\supervisor given}}
+\def\supervisor#1{\gdef\thesupervisor{#1}}
+\def\thesupervisor{\@latex@warning@no@line{No \noexpand\supervisor given}}
 
-\def\examiner#1{\gdef\@examiner{#1}}
-\def\@examiner{\@latex@warning@no@line{No \noexpand\examiner given}}
+\def\examiner#1{\gdef\theexaminer{#1}}
+\def\theexaminer{\@latex@warning@no@line{No \noexpand\examiner given}}
 
-\def\departmentofsupervisor#1{\gdef\@departmentofsupervisor{#1}}
-\def\@departmentofsupervisor{\@latex@warning@no@line{No \noexpand\departmentofsupervisor given}}
+\def\departmentofsupervisor#1{\gdef\thedepartmentofsupervisor{#1}}
+\def\thedepartmentofsupervisor{\@latex@warning@no@line{No \noexpand\departmentofsupervisor given}}
 
-\def\departmentofexaminer#1{\gdef\@departmentofexaminer{#1}}
-\def\@departmentofexaminer{\@latex@warning@no@line{No \noexpand\departmentofexaminer given}}
+\def\departmentofexaminer#1{\gdef\thedepartmentofexaminer{#1}}
+\def\thedepartmentofexaminer{\@latex@warning@no@line{No \noexpand\departmentofexaminer given}}
 
-\def\division#1{\gdef\@division{#1}}
-\def\@division{\@latex@warning@no@line{No \noexpand\division given}}
+\def\division#1{\gdef\thedivision{#1}}
+\def\thedivision{\@latex@warning@no@line{No \noexpand\division given}}
 
 \def\keywords#1{\gdef\thekeywords{#1}}
-
 \makeatother
 
 \renewenvironment{abstract}
   {\newpage
-   \makeatletter
    \noindent\thetitle{}\\
    \theauthor{}\\
-   \makeatother
    Department of Computer Science and Engineering\\
    Chalmers University of Technology and University of Gothenburg
 
