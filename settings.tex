@@ -43,8 +43,8 @@
 \def\division#1{\gdef\@division{#1}}
 \def\@division{\@latex@warning@no@line{No \noexpand\division given}}
 
-\def\keywords#1{\gdef\@keywords{#1}}
-\def\@keywords{\@latex@warning@no@line{No \noexpand\keywords given}}
+\def\keywords#1{\gdef\thekeywords{#1}}
+
 \makeatother
 
 \renewenvironment{abstract}
@@ -62,7 +62,7 @@
   }
   {% KEYWORDS (MAXIMUM 10 WORDS)
    \vfill
-   Keywords: foo, bar
+   Keywords: \thekeywords
 
    \newpage	% Create empty back of side
    \thispagestyle{empty}
