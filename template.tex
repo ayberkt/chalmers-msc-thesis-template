@@ -2,27 +2,21 @@
 
 \newcommand{\oneLineSubtitle}{Subtitle}
 
-\newcommand{\makefrontmatter}{
+\newcommand{\maketitlepage}{
   \pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
   \input{template/frontmatter/titlepage}
+}
 
-  % ABSTRACT
-  \newpage
-  \input{template/frontmatter/abstract}
-
-  % ACKNOWLEDGEMENTS
-  \newpage
-  \input{template/frontmatter/acknowledgements}
-
+\newcommand{\makelists}{
   % TABLE OF CONTENTS
   \newpage
   \tableofcontents
 
-  % OTHER FRONTMATTER
   % List of figures (add to table of contents)
   \cleardoublepage
   \addcontentsline{toc}{chapter}{\listfigurename} 
   \listoffigures
+
   % List of tables (add to table of contents)
   \cleardoublepage
   \addcontentsline{toc}{chapter}{\listtablename}  
