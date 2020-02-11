@@ -40,7 +40,8 @@
   % REFERENCES / BIBLIOGRAPHY
   \cleardoublepage
   \addcontentsline{toc}{chapter}{Bibliography}
-  \input{backmatter/references}
+  \bibliographystyle{acm}
+  \bibliography{references}
 
   % APPENDICES
   \cleardoublepage
@@ -48,5 +49,5 @@
   \setcounter{page}{1}
   \pagenumbering{Roman}	% Capitalized roman numbering starting from I (one)
 
-  \input{backmatter/appendix_1}
+  \input{template/backmatter/appendix_1}
 }
