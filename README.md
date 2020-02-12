@@ -14,6 +14,7 @@ Then create your, say `file.tex`, which should look like this:
 \input{template/template}
 
 \title{The Title}
+\subtitle{The subtitle, (line breaks are allowed)}
 \author{John Doe}
 
 \supervisor{Joe Bloggs}
