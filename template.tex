@@ -8,12 +8,21 @@
 \newtheorem{defn}{Definition}
 
 \newcommand{\maketitlepage}{
+  % Store old parindent value
+  \setlength{\oldparindent}{\parindent}
+  \setlength{\oldparskip}{\parskip}
   \pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
   \input{template/frontmatter/titlepage}
+  \setlength{\parindent}{\oldparindent}
+  \setlength{\parskip}{\oldparskip}
 }
 
 \newcommand{\makelists}{
-  % TABLE OF CONTENTS
+  % Store old paragraph separator
+  \setlength{\oldparskip}{\parskip}
+  \setlength{\parskip}{0pt}
+
+  % TABLEOF CONTENTS
   \newpage
   \tableofcontents
 
@@ -32,7 +41,7 @@
   \cleardoublepage
   \setcounter{page}{1}
   \pagenumbering{arabic}			% Arabic numbering starting from 1 (one)
-  \setlength{\parindent}{1.5em}
+  \setlength{\parskip}{\oldparskip}
 }
 
 \newcommand{\makebackmatter}{

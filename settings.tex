@@ -48,6 +48,12 @@
 \def\keywords#1{\gdef\thekeywords{#1}}
 \makeatother
 
+% These lengths keep track of the user requested lengths. Since some
+% commands and environments change these lengths we need to store them
+% in order to restore them.
+\newlength\oldparskip{}
+\newlength\oldparindent{}
+
 \renewenvironment{abstract}
   {\newpage
    \noindent\thetitle{}\\
@@ -56,7 +62,6 @@
    Chalmers University of Technology and University of Gothenburg
 
    \thispagestyle{plain} % Supress header
-   \setlength{\parindent}{1.5em}
    \section*{Abstract}
   }
   {% KEYWORDS (MAXIMUM 10 WORDS)
