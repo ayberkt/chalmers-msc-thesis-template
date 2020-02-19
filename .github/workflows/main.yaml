@@ -1,0 +1,11 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  golden-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/tester/
