@@ -54,8 +54,8 @@ you should use Times New Roman
 ## Acknowledgements
 
 This template is based on the [template provided by the CSE department][0]. The
-main contributors are Ayberk Tosun [@ayberkt](https://github.com/ayberkt/) and
-Jacob Jonsson [@Jassob](https://github.com/Jassob). The following people have
+main contributors are Ayberk Tosun ([@ayberkt](https://github.com/ayberkt/)) and
+Jacob Jonsson ([@Jassob](https://github.com/Jassob)). The following people have
 contributed to the original template (as stated by the `main.tex` of the
 original template).
 
