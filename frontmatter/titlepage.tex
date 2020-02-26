@@ -81,8 +81,9 @@ Gothenburg, Sweden \the\year
 	\end{figure}	\vspace{5mm}
 
 	Department of Computer Science and Engineering\\
+	\ifdefined\thedivision
 	\emph{Division of \thedivision}\\
-	%Name of research group (if applicable)\\
+	\fi
 	\textsc{Chalmers University of Technology} \\
 	\textsc{University of Gothenburg} \\
 	Gothenburg, Sweden \the\year \\
@@ -114,7 +115,9 @@ Examiner: \theexaminer, Department of \thedepartmentofexaminer
 \noindent
 Master's Thesis \the\year\\
 Department of Computer Science and Engineering\\
+\ifdefined\thedivision
 Division of \thedivision\\
+\fi
 Chalmers University of Technology and University of Gothenburg\\
 SE-412 96 Gothenburg\\
 Telephone +46 31 772 1000
