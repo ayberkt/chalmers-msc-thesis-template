@@ -15,12 +15,15 @@
 \AddToShipoutPicture*{\backgroundpic{-4}{56.7}{template/figure/auxiliary/frontpage_gu_eng_vec_m2.pdf}}
 \addtolength{\voffset}{2cm}
 
-% Cover picture (replace with your own or delete)
+\ifdefined\thecoverimage
 \begin{figure}[H]
 \centering
-\vspace{1cm}	% Adjust vertical spacing here
-%\includegraphics[width=0.9\linewidth]{figure/somepicture}
+\vspace{1cm}
+\includegraphics[width=0.9\linewidth]{\thecoverimage}
 \end{figure}
+\else
+\vspace{1cm}
+\fi
 
 %% The title page has no indentation.
 \setlength{\parindent}{0cm}
@@ -123,9 +126,9 @@ SE-412 96 Gothenburg\\
 Telephone +46 31 772 1000
 \vspace{0.5cm}
 \vfill
-% Caption for cover page figure if used, possibly with reference to further information
-% in the report
 \noindent
-Cover: Description of the picture on the cover page (if applicable)\\
+\ifdefined\thecoverimagecaption
+Cover: \thecoverimagecaption\\
+\fi
 Typeset in \LaTeX\\
 Gothenburg, Sweden \the\year

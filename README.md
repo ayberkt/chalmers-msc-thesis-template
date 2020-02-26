@@ -25,6 +25,8 @@ Then create your, say `file.tex`, which should look like this:
 
 \division{The division name}
 
+\coverimage{path/to/your/cover-image}{Caption to your cover image}
+
 \begin{document}
 
 \maketitlepage{}
