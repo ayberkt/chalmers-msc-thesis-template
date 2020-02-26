@@ -33,7 +33,9 @@
 
 \textbf{\Huge \multiLineTitle{0.2cm}} \\[0.5cm]
 
+\ifdefined\thesubtitle
 {\Large \thesubtitle}\\[0.5cm]
+\fi
 
 Master's Thesis in Computer Science and Engineering
 
@@ -65,7 +67,9 @@ Gothenburg, Sweden \the\year
 \begin{center}
 	\textsc{\large Master's thesis \the\year}\\[4cm]		% Report number is currently not in use
 	\textbf{\Large \multiLineTitle{0.2cm}} \\[1cm]
+	\ifdefined\thesubtitle
 	{\large \thesubtitle}\\[1cm]
+	\fi
 	{\large \theauthor}
 
 	\vfill
@@ -77,8 +81,9 @@ Gothenburg, Sweden \the\year
 	\end{figure}	\vspace{5mm}
 
 	Department of Computer Science and Engineering\\
+	\ifdefined\thedivision
 	\emph{Division of \thedivision}\\
-	%Name of research group (if applicable)\\
+	\fi
 	\textsc{Chalmers University of Technology} \\
 	\textsc{University of Gothenburg} \\
 	Gothenburg, Sweden \the\year \\
@@ -91,7 +96,9 @@ Gothenburg, Sweden \the\year
 \thispagestyle{plain}
 \vspace*{4.5cm}
 \noindent \oneLineTitle\\
+\ifdefined\thesubtitle
 \thesubtitle\\
+\fi
 \theauthor
 
 \vspace{1cm}
@@ -108,7 +115,9 @@ Examiner: \theexaminer, Department of \thedepartmentofexaminer
 \noindent
 Master's Thesis \the\year\\
 Department of Computer Science and Engineering\\
+\ifdefined\thedivision
 Division of \thedivision\\
+\fi
 Chalmers University of Technology and University of Gothenburg\\
 SE-412 96 Gothenburg\\
 Telephone +46 31 772 1000
