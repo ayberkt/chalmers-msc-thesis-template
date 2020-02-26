@@ -24,6 +24,7 @@
 
 %% The title page has no indentation.
 \setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
 
 % Cover text
 \mbox{}
@@ -86,6 +87,7 @@ Gothenburg, Sweden \the\year
 
 % IMPRINT PAGE (BACK OF TITLE PAGE)
 \newpage
+\setlength{\parskip}{0cm}
 \thispagestyle{plain}
 \vspace*{4.5cm}
 \noindent \oneLineTitle\\
@@ -118,6 +120,3 @@ Telephone +46 31 772 1000
 Cover: Description of the picture on the cover page (if applicable)\\
 Typeset in \LaTeX\\
 Gothenburg, Sweden \the\year
-
-%% Restore the indentation once done with the title page.
-\setlength{\parindent}{1.5em}

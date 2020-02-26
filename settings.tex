@@ -6,6 +6,7 @@
 \usepackage{amsmath}								% Mathematical expressions (American mathematical society)
 \usepackage{amssymb}								% Mathematical symbols (American mathematical society)
 \usepackage{amsthm}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}								% Figures
 \usepackage{titling}
 \usepackage{unicode-math}
@@ -48,6 +49,12 @@
 \def\keywords#1{\gdef\thekeywords{#1}}
 \makeatother
 
+% These lengths keep track of the user requested lengths. Since some
+% commands and environments change these lengths we need to store them
+% in order to restore them.
+\newlength\oldparskip{}
+\newlength\oldparindent{}
+
 \renewenvironment{abstract}
   {\newpage
    \noindent\thetitle{}\\
@@ -56,7 +63,6 @@
    Chalmers University of Technology and University of Gothenburg
 
    \thispagestyle{plain} % Supress header
-   \setlength{\parindent}{1.5em}
    \section*{Abstract}
   }
   {% KEYWORDS (MAXIMUM 10 WORDS)
@@ -96,7 +102,6 @@
 
 % Activate clickable links in table of contents
 \usepackage{hyperref}
-\hypersetup{colorlinks, citecolor=black, filecolor=black, linkcolor=black, urlcolor=black}
 
 
 % Define the number of section levels to be included in the t.o.c. and numbered	(3 is default)

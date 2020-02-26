@@ -74,22 +74,19 @@ run_test() {
 	fi
     fi
 
-    # Run latexmk in test dir
-    cd "${TESTDIR}";
-    if ! tectonic main.tex; then
+    if ! tectonic "${TESTDIR}/main.tex"; then
 	echo "${TESTNAME}: LaTeX failed, see previous output."
 	return 2
-    elif ! pdftops ${PDFTOPS_ARGS} main.pdf; then
+    elif ! pdftops ${PDFTOPS_ARGS} "${TESTDIR}/main.pdf" "${TESTDIR}/main.ps" ; then
 	echo "${TESTNAME}: pdftops failed, see previous output."
 	return 3
-    elif ! diff main.ps main.golden.ps > /dev/null 2>&1 ; then
+    elif ! diff "${TESTDIR}/main.ps" "${TESTDIR}/main.golden.ps" > /dev/null 2>&1 ; then
 	echo "${TESTNAME}: Failed! PDF's don't match."
 	echo "${TESTNAME}: Failed PDF can be found in ${SRCDIR}/main.mismatch.pdf"
-	cp main.pdf "${SRCDIR}/main.mismatch.pdf"
+	cp "${TESTDIR}/main.pdf" "${SRCDIR}/main.mismatch.pdf"
 	return 1
     else
     	echo "${TESTNAME}: Passed!"
-	cd - > /dev/null
 	return 0
     fi
 }
@@ -110,10 +107,8 @@ generate_golden() {
 	exit 1
     fi
 
-    # Run latexmk in test dir
-    cd "${TESTDIR}"
-    if tectonic main.tex; then
-	cp main.pdf "${SRCDIR}/main.golden.pdf"
+    if tectonic "${TESTDIR}/main.tex"; then
+	cp "${TESTDIR}/main.pdf" "${SRCDIR}/main.golden.pdf"
     else
 	return 2
     fi

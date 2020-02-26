@@ -1,5 +1,0 @@
-name: "Run golden tests inside test/ directory"
-description: "For each directory inside test/ directory, typeset the main.tex document and compare the produced PDF file to the checked in version."
-runs:
-  using: "docker"
-  image: "Dockerfile"
