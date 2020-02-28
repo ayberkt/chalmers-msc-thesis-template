@@ -46,7 +46,7 @@ setup_build_dir() {
     cp ../template.tex ../settings.tex ${TEMPLATEDIR}
 
     # Copy latex source to template dir
-    cp "${SRCDIR}/main.tex" "${TESTDIR}"
+    cp -r "${SRCDIR}"/* "${TESTDIR}"
     echo "${TESTDIR}"
 }
 

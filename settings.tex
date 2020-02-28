@@ -45,6 +45,31 @@
 \def\division#1{\gdef\thedivision{#1}}
 
 \def\keywords#1{\gdef\thekeywords{#1}}
+
+\newcommand{\coverimage}[2]{%
+  \if\relax#1\relax
+  \ClassError{chalmers-msc-report}{%
+    \noexpand\coverimage: Empty IMAGE-PATH \MessageBreak
+    Usage: \noexpand\coverimage{IMAGE-PATH}{IMAGE-CAPTION}
+  }{%
+    You called \noexpand\coverimage like this: \protect\coverimage{}{#2} (or in some other way that caused LaTeX to think that the second argument is empty), but IMAGE-PATH cannot be empty. \MessageBreak
+    Insert a path to \noexpand\coverimage first argument, i.e. \noexpand\coverimage{path/to/my-graphic}{#2}.
+  }
+  \else
+  \gdef\thecoverimage{#1}
+  \fi
+  \if\relax#2\relax
+  \ClassError{chalmers-msc-report}{%
+    \noexpand\coverimage: Empty IMAGE-CAPTION \MessageBreak
+    Usage: \noexpand\coverimage{IMAGE-PATH}{IMAGE-CAPTION}
+  }{%
+    You called \noexpand\coverimage like this: `\noexpand\coverimage{#1}` (or in some other way that caused LaTeX to think that the second argument is empty), but IMAGE-CAPTION cannot be empty. \MessageBreak
+    Insert a caption to \noexpand\coverimage second argument, i.e. `\noexpand\coverimage{#1}{My caption}`.
+  }
+  \else
+  \gdef\thecoverimagecaption{#2}
+  \fi
+}
 \makeatother
 
 % These lengths keep track of the user requested lengths. Since some
