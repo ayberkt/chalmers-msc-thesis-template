@@ -80,7 +80,7 @@ run_test() {
     elif ! pdftops ${PDFTOPS_ARGS} "${TESTDIR}/main.pdf" "${TESTDIR}/main.ps" ; then
 	echo "${TESTNAME}: pdftops failed, see previous output."
 	return 3
-    elif ! diff "${TESTDIR}/main.ps" "${TESTDIR}/main.golden.ps" > /dev/null 2>&1 ; then
+    elif ! comparepdf "${TESTDIR}/main.pdf" "${TESTDIR}/main.golden.pdf" > /dev/null 2>&1 ; then
 	echo "${TESTNAME}: Failed! PDF's don't match."
 	echo "${TESTNAME}: Failed PDF can be found in ${SRCDIR}/main.mismatch.pdf"
 	cp "${TESTDIR}/main.pdf" "${SRCDIR}/main.mismatch.pdf"
