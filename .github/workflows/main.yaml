@@ -17,7 +17,7 @@ jobs:
           # Tectonic deps
           sudo apt-get install -y --no-install-recommends libfontconfig1-dev libgraphite2-dev libharfbuzz-dev libicu-dev libssl-dev zlib1g-dev
           # Test script deps
-          sudo apt-get install -y --no-install-recommends poppler-utils
+          sudo apt-get install -y --no-install-recommends poppler-utils comparepdf
 
       - name: "Run actions/cache@v1: cache tectonic binary"
         uses: actions/cache@v1
