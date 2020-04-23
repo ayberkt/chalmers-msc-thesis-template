@@ -11,7 +11,7 @@
   % Store old parindent value
   \setlength{\oldparindent}{\parindent}
   \setlength{\oldparskip}{\parskip}
-  \pagenumbering{roman}			% Roman numbering (starting with i (one)) until first main chapter
+  \pagenumbering{roman}      % Roman numbering (starting with i (one)) until first main chapter
   \input{template/frontmatter/titlepage}
   \setlength{\parindent}{\oldparindent}
   \setlength{\parskip}{\oldparskip}
@@ -40,7 +40,7 @@
   % START OF MAIN DOCUMENT
   \cleardoublepage
   \setcounter{page}{1}
-  \pagenumbering{arabic}			% Arabic numbering starting from 1 (one)
+  \pagenumbering{arabic}      % Arabic numbering starting from 1 (one)
   \setlength{\parskip}{\oldparskip}
 }
 
@@ -55,7 +55,7 @@
   \cleardoublepage
   \appendix
   \setcounter{page}{1}
-  \pagenumbering{Roman}	% Capitalized roman numbering starting from I (one)
+  \pagenumbering{Roman}  % Capitalized roman numbering starting from I (one)
 
   \input{template/backmatter/appendix_1}
 }
