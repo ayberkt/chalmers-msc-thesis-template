@@ -8,8 +8,13 @@
 
 % COVER PAGE
 \begin{titlepage}
-\newgeometry{top=3cm, bottom=3cm,
-      left=2.25 cm, right=2.25cm}  % Temporarily change margins
+% Temporarily change margins
+\newgeometry{
+  top=3cm,
+  bottom=3cm,
+  left=2.25cm,
+  right=2.25cm
+}
 
 % Cover page background
 \AddToShipoutPicture*{\backgroundpic{-4}{56.7}{template/figure/auxiliary/frontpage_gu_eng_vec_m2.pdf}}
@@ -32,28 +37,27 @@
 % Cover text
 \mbox{}
 \vfill
-\renewcommand{\familydefault}{\sfdefault} \normalfont % Set cover page font
+{\sf
+  \textbf{\Huge \multiLineTitle} \vspace{\baselineskip}\vspace{0.5cm}
 
-\textbf{\Huge \multiLineTitle{0.2cm}} \\[0.5cm]
+  \ifdefined\thesubtitle
+  {\Large \thesubtitle}  \vspace{\baselineskip}\vspace{0.5cm}
+  \fi
 
-\ifdefined\thesubtitle
-{\Large \thesubtitle}\\[0.5cm]
-\fi
+  Master's Thesis in Computer Science and Engineering
 
-Master's Thesis in Computer Science and Engineering
+  \vspace{1em}
 
-\vspace{1em}
+  {\Large \theauthor}
 
-{\Large \theauthor}
+  \vspace{2.9cm}
 
-\vspace{2.9cm}
+  Department of Computer Science and Engineering \\
+  {\normalfont \textsc{Chalmers University of Technology}} \\
+  {\normalfont \textsc{University of Gothenburg}} \\
+  Gothenburg, Sweden \the\year
+}
 
-Department of Computer Science and Engineering \\
-\textsc{Chalmers University of Technology} \\
-\textsc{University of Gothenburg} \\
-Gothenburg, Sweden \the\year
-
-\renewcommand{\familydefault}{\rmdefault} \normalfont % Reset standard font
 \end{titlepage}
 
 
