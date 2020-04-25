@@ -38,7 +38,11 @@
 \mbox{}
 \vfill
 {\sf
-  \textbf{\Huge \multiLineTitle} \vspace{\baselineskip}\vspace{0.5cm}
+  \ifdefined\themultilinetitle
+    \textbf{\Huge \themultilinetitle{}} \vspace{\baselineskip}\vspace{0.5cm}
+  \else
+    \textbf{\Huge \thetitle{}} \vspace{\baselineskip}\vspace{0.5cm}
+  \fi
 
   \ifdefined\thesubtitle
   {\Large \thesubtitle}  \vspace{\baselineskip}\vspace{0.5cm}
