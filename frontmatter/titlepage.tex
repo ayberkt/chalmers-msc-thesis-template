@@ -32,28 +32,27 @@
 % Cover text
 \mbox{}
 \vfill
-\renewcommand{\familydefault}{\sfdefault} \normalfont % Set cover page font
+{\sf
+  \textbf{\Huge \multiLineTitle{0.2cm}} \\[0.5cm]
 
-\textbf{\Huge \multiLineTitle{0.2cm}} \\[0.5cm]
+  \ifdefined\thesubtitle
+  {\Large \thesubtitle}\\[0.5cm]
+  \fi
 
-\ifdefined\thesubtitle
-{\Large \thesubtitle}\\[0.5cm]
-\fi
+  Master's Thesis in Computer Science and Engineering
 
-Master's Thesis in Computer Science and Engineering
+  \vspace{1em}
 
-\vspace{1em}
+  {\Large \theauthor}
 
-{\Large \theauthor}
+  \vspace{2.9cm}
 
-\vspace{2.9cm}
+  Department of Computer Science and Engineering \\
+  {\normalfont \textsc{Chalmers University of Technology}} \\
+  {\normalfont \textsc{University of Gothenburg}} \\
+  Gothenburg, Sweden \the\year
+}
 
-Department of Computer Science and Engineering \\
-\textsc{Chalmers University of Technology} \\
-\textsc{University of Gothenburg} \\
-Gothenburg, Sweden \the\year
-
-\renewcommand{\familydefault}{\rmdefault} \normalfont % Reset standard font
 \end{titlepage}
 
 
