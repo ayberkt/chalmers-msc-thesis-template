@@ -53,6 +53,14 @@ override the fonts with `\setmainfont{font-name}` and
 `\setmathfont{math-font-name}` although [the official guidelines][2] state that
 you should use Times New Roman
 
+## Multi-line titles
+
+If you would like your title to broken into two lines in the title page (check
+if you are getting an `overfull` warning to see if your title is too long), you
+can specify a multi-line version of your title using the command
+`\multitlinetitle`. The normal title will be used if you do not specify a
+multi-line one.
+
 ## Acknowledgements
 
 This template is based on the [template provided by the CSE department][0]. The
