@@ -30,6 +30,10 @@
 \makeatletter
 \long\def\subtitle#1{\gdef\thesubtitle{#1}}
 
+\newcommand{\multilinetitle}[1]{%
+  \newcommand\themultilinetitle{#1}
+}
+
 \def\supervisor#1{\gdef\thesupervisor{#1}}
 \def\thesupervisor{\@latex@warning@no@line{No \noexpand\supervisor given}}
 
