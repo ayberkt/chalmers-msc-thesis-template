@@ -2,14 +2,11 @@
 
 \newtheorem{prop}{Proposition}
 \numberwithin{prop}{chapter}
-\newtheorem{thm}{Theorem}
-\numberwithin{thm}{chapter}
-\newtheorem{lemma}{Lemma}
-\numberwithin{lemma}{chapter}
+\newtheorem{thm}[prop]{Theorem}
+\newtheorem{lemma}[prop]{Lemma}
 
 \theoremstyle{definition}
-\newtheorem{defn}{Definition}
-\numberwithin{defn}{chapter}
+\newtheorem{defn}[prop]{Definition}
 
 \newcommand{\maketitlepage}{
   % Store old parindent value
